@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("ElevatorGame =)");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
@@ -23,7 +23,7 @@ public class Main extends Application {
         for (int i = 0; i < elevator.getFloorsNum(); i++) {
             System.out.println(elevator.getFloors().get(i));
         }
-
+        
 
 //        launch(args);
     }
