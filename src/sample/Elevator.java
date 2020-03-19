@@ -5,13 +5,9 @@ import java.util.ArrayList;
 public class Elevator {
     /**
      * 0 - none, 1 - upwards, 2 - downwards, 3 - both
+     * The same, if it is called internally
      */
     private ArrayList<Integer> floors;
-
-    /**
-     * 0 - not selected, 1 - selected
-     */
-    private ArrayList<Boolean> targetFloor;
 
     private int floorsNum = 9;
 
@@ -26,22 +22,14 @@ public class Elevator {
     private int callDownNow = 0;
 
     public Elevator() {
-        floors = new ArrayList<Integer>(floorsNum);
+        floors = new ArrayList<>(floorsNum);
         for (int i = 0; i < floorsNum; i++) {
             floors.add(0);
-        }
-
-        for (int i = 0; i < floorsNum; i++) {
-            targetFloor.add(false);
         }
     }
 
     public ArrayList<Integer> getFloors() {
         return floors;
-    }
-
-    public ArrayList<Boolean> getTargetFloor() {
-        return targetFloor;
     }
 
     public int getFloorsNum() {
@@ -86,5 +74,34 @@ public class Elevator {
 
     public void callDecrease() {
         callNum--;
+    }
+
+    public void switchOnFloorsState(int targetFloor, int direction) {
+        if (floors.get(targetFloor) != 0) {
+            if (direction == 1) {
+                if (floors.get(targetFloor) == 2) {
+                    floors.set(targetFloor, 3);
+                }
+            } else {
+                if (floors.get(targetFloor) == 1) {
+                    floors.set(targetFloor, 3);
+                }
+            }
+        } else {
+            floors.set(targetFloor, direction);
+        }
+        callNum++;
+    }
+
+    public void switchOffFloorsState(int targetFloor, int direction) {
+        if (floors.get(targetFloor) == 3) {
+            if (direction == 2) {
+                floors.set(targetFloor, 1);
+            } else {
+                floors.set(targetFloor, 2);
+            }
+        } else {
+            floors.set(targetFloor, 0);
+        }
     }
 }
