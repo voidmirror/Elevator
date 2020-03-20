@@ -12,7 +12,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("ElevatorGame =)");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 500, 800));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -25,6 +26,6 @@ public class Main extends Application {
         }
         
 
-//        launch(args);
+        launch(args);
     }
 }

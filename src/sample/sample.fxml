@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -10,6 +11,28 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="800.0" prefWidth="500.0">
+         <children>
+            <Button layoutX="53.0" layoutY="35.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="60.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="715.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="740.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="120.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="145.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="205.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="230.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="290.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="315.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="375.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="400.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="460.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="485.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="545.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="570.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="53.0" layoutY="630.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="53.0" layoutY="655.0" mnemonicParsing="false" text="▼" />
+            <Button layoutX="273.0" layoutY="561.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="273.0" layoutY="586.0" mnemonicParsing="false" text="▼" />
+         </children></AnchorPane>
    </children>
 </GridPane>
