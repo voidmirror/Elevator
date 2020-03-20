@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
@@ -13,26 +15,76 @@
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="500.0">
          <children>
-            <Button layoutX="53.0" layoutY="35.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="60.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="715.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="740.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="120.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="145.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="205.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="230.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="290.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="315.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="375.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="400.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="460.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="485.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="545.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="570.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="53.0" layoutY="630.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="53.0" layoutY="655.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp8" fx:id="btnUp8" layoutX="53.0" layoutY="35.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown8" fx:id="btnDown8" layoutX="53.0" layoutY="60.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp0" fx:id="btnUp0" onAction="#imgElevatorSwapToOpen" layoutX="53.0" layoutY="715.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown0" fx:id="btnDown0" onAction="#imgElevatorSwapToClose" layoutX="53.0" layoutY="740.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp7" fx:id="btnUp7" layoutX="53.0" layoutY="120.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown7" fx:id="btnDown7" layoutX="53.0" layoutY="145.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp6" fx:id="btnUp6" layoutX="53.0" layoutY="205.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown6" fx:id="btnDown6" layoutX="53.0" layoutY="230.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp5" fx:id="btnUp5" layoutX="53.0" layoutY="290.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown5" fx:id="btnDown5" layoutX="53.0" layoutY="315.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp4" fx:id="btnUp4" layoutX="53.0" layoutY="375.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown4" fx:id="btnDown4" layoutX="53.0" layoutY="400.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp3" fx:id="btnUp3" layoutX="53.0" layoutY="460.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown3" fx:id="btnDown3" layoutX="53.0" layoutY="485.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp2" fx:id="btnUp2" layoutX="53.0" layoutY="545.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown2" fx:id="btnDown2" layoutX="53.0" layoutY="570.0" mnemonicParsing="false" text="▼" />
+            <Button id="btnUp1" fx:id="btnUp1" layoutX="53.0" layoutY="630.0" mnemonicParsing="false" text="▲" />
+            <Button id="btnDown1" fx:id="btnDown1" layoutX="53.0" layoutY="655.0" mnemonicParsing="false" text="▼" />
             <Button layoutX="273.0" layoutY="561.0" mnemonicParsing="false" text="▲" />
             <Button layoutX="273.0" layoutY="586.0" mnemonicParsing="false" text="▼" />
+            <Label layoutX="23.0" layoutY="42.0" text="8">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="127.0" text="7">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="212.0" text="6">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="297.0" text="5">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="382.0" text="4">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="467.0" text="3">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="552.0" text="2">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="637.0" text="1">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="722.0" text="0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView id="imageViewElevator" fx:id="imageViewElevator" fitHeight="70.0" fitWidth="44.0" layoutX="101.0" layoutY="705.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@src/img/elevator_closed.jpg" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </children>
 </GridPane>
