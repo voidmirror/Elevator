@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -13,42 +14,42 @@ public class Controller {
     private ImageView imageViewElevator;
 
     @FXML
-    private Button btnUp8;
+    private ToggleButton btnUp8;
     @FXML
-    private Button btnUp7;
+    private ToggleButton btnUp7;
     @FXML
-    private Button btnUp6;
+    private ToggleButton btnUp6;
     @FXML
-    private Button btnUp5;
+    private ToggleButton btnUp5;
     @FXML
-    private Button btnUp4;
+    private ToggleButton btnUp4;
     @FXML
-    private Button btnUp3;
+    private ToggleButton btnUp3;
     @FXML
-    private Button btnUp2;
+    private ToggleButton btnUp2;
     @FXML
-    private Button btnUp1;
+    private ToggleButton btnUp1;
     @FXML
-    private Button btnUp0;
+    private ToggleButton btnUp0;
 
     @FXML
-    private Button btnDown8;
+    private ToggleButton btnDown8;
     @FXML
-    private Button btnDown7;
+    private ToggleButton btnDown7;
     @FXML
-    private Button btnDown6;
+    private ToggleButton btnDown6;
     @FXML
-    private Button btnDown5;
+    private ToggleButton btnDown5;
     @FXML
-    private Button btnDown4;
+    private ToggleButton btnDown4;
     @FXML
-    private Button btnDown3;
+    private ToggleButton btnDown3;
     @FXML
-    private Button btnDown2;
+    private ToggleButton btnDown2;
     @FXML
-    private Button btnDown1;
+    private ToggleButton btnDown1;
     @FXML
-    private Button btnDown0;
+    private ToggleButton btnDown0;
 
     Image imgElevatorOpened;
     Image imgElevatorClosed;
