@@ -20,6 +20,7 @@ public class Elevator {
     private int callNum = 0;
     private int callUpNow = 0;
     private int callDownNow = 0;
+    private int callOnTheWay = 0;
 
     public Elevator() {
         floors = new ArrayList<>(floorsNum);
@@ -83,21 +84,40 @@ public class Elevator {
         callNum--;
     }
 
+    public int getCallOnTheWay() {
+        return callOnTheWay;
+    }
+
+    public void setCurrentFloor(int currentFloor) {
+        this.currentFloor = currentFloor;
+    }
+
+    public void setCallNum(int callNum) {
+        this.callNum = callNum;
+    }
+
+    public void setCallOnTheWay(int callOnTheWay) {
+        this.callOnTheWay = callOnTheWay;
+    }
+
     public void switchOnFloorsState(int targetFloor, int direction) {
         if (floors.get(targetFloor) != 0) {
             if (direction == 1) {
                 if (floors.get(targetFloor) == 2) {
                     floors.set(targetFloor, 3);
+                    callNum++;
                 }
             } else {
                 if (floors.get(targetFloor) == 1) {
                     floors.set(targetFloor, 3);
+                    callNum++;
                 }
             }
         } else {
             floors.set(targetFloor, direction);
+            callNum++;
         }
-        callNum++;
+        System.out.println(callNum);
     }
 
     public void switchOffFloorsState(int targetFloor, int direction) {
@@ -110,6 +130,7 @@ public class Elevator {
         } else {
             floors.set(targetFloor, 0);
         }
+        callNum--;  // check on practice (structure)
     }
 
     public void pressedBtnReaction(PressedBtn pressedBtn, boolean isSelected) {
@@ -123,16 +144,8 @@ public class Elevator {
     }
 
     public boolean checkCallNum() {
-        return callNum == 0;
+        return callNum != 0;
     }
 
-    public void mainCycle() {
-        if (checkCallNum()) {
-            while(callNum != 0) {
-                for (int i = 0; i < moveDirection; i++) {
-                    
-                }
-            }
-        }
-    }
+
 }
