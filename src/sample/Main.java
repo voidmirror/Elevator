@@ -19,13 +19,6 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Elevator elevator = new Elevator();
-        System.out.println(elevator.getFloors().size());
-        for (int i = 0; i < elevator.getFloorsNum(); i++) {
-            System.out.println(elevator.getFloors().get(i));
-        }
-        
-
         launch(args);
     }
 }

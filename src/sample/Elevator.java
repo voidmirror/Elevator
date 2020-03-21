@@ -32,6 +32,13 @@ public class Elevator {
         return floors;
     }
 
+    public void printFloors() {
+        for (int i = 0; i < floorsNum; i++) {
+            System.out.print(floors.get(i) + " ");
+        }
+        System.out.println();
+    }
+
     public int getFloorsNum() {
         return floorsNum;
     }
@@ -102,6 +109,30 @@ public class Elevator {
             }
         } else {
             floors.set(targetFloor, 0);
+        }
+    }
+
+    public void pressedBtnReaction(PressedBtn pressedBtn, boolean isSelected) {
+        if (isSelected) {
+            switchOnFloorsState(pressedBtn.getTargetFloor(), pressedBtn.getDirection());
+        } else {
+            switchOffFloorsState(pressedBtn.getTargetFloor(), pressedBtn.getDirection());
+        }
+        printFloors();
+        System.out.println();
+    }
+
+    public boolean checkCallNum() {
+        return callNum == 0;
+    }
+
+    public void mainCycle() {
+        if (checkCallNum()) {
+            while(callNum != 0) {
+                for (int i = 0; i < moveDirection; i++) {
+                    
+                }
+            }
         }
     }
 }

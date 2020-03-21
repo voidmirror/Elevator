@@ -15,26 +15,24 @@
    <children>
       <AnchorPane prefHeight="800.0" prefWidth="500.0">
          <children>
-            <ToggleButton id="btnUp8" fx:id="btnUp8" layoutX="53.0" layoutY="35.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown8" fx:id="btnDown8" layoutX="53.0" layoutY="60.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp0" fx:id="btnUp0" layoutX="53.0" layoutY="715.0" mnemonicParsing="false" onAction="#imgElevatorSwapToOpen" text="▲" />
-            <ToggleButton id="btnDown0" fx:id="btnDown0" layoutX="53.0" layoutY="740.0" mnemonicParsing="false" onAction="#imgElevatorSwapToClose" text="▼" />
-            <ToggleButton id="btnUp7" fx:id="btnUp7" layoutX="53.0" layoutY="120.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown7" fx:id="btnDown7" layoutX="53.0" layoutY="145.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp6" fx:id="btnUp6" layoutX="53.0" layoutY="205.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown6" fx:id="btnDown6" layoutX="53.0" layoutY="230.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp5" fx:id="btnUp5" layoutX="53.0" layoutY="290.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown5" fx:id="btnDown5" layoutX="53.0" layoutY="315.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp4" fx:id="btnUp4" layoutX="53.0" layoutY="375.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown4" fx:id="btnDown4" layoutX="53.0" layoutY="400.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp3" fx:id="btnUp3" layoutX="53.0" layoutY="460.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown3" fx:id="btnDown3" layoutX="53.0" layoutY="485.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp2" fx:id="btnUp2" layoutX="53.0" layoutY="545.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown2" fx:id="btnDown2" layoutX="53.0" layoutY="570.0" mnemonicParsing="false" text="▼" />
-            <ToggleButton id="btnUp1" fx:id="btnUp1" layoutX="53.0" layoutY="630.0" mnemonicParsing="false" text="▲" />
-            <ToggleButton id="btnDown1" fx:id="btnDown1" layoutX="53.0" layoutY="655.0" mnemonicParsing="false" text="▼" />
-            <Button layoutX="273.0" layoutY="561.0" mnemonicParsing="false" text="▲" />
-            <Button layoutX="273.0" layoutY="586.0" mnemonicParsing="false" text="▼" />
+            <ToggleButton id="btnDown8" fx:id="btnDown8" layoutX="53.0" layoutY="48.0" mnemonicParsing="false" onAction="#pressedBtnDown8" text="▼" />
+            <ToggleButton id="btnUp0" fx:id="btnUp0" layoutX="53.0" layoutY="728.0" mnemonicParsing="false" onAction="#pressedBtnUp0" text="▲" />
+            <ToggleButton id="btnUp7" fx:id="btnUp7" layoutX="53.0" layoutY="120.0" mnemonicParsing="false" onAction="#pressedBtnUp7" text="▲" />
+            <ToggleButton id="btnDown7" fx:id="btnDown7" layoutX="53.0" layoutY="145.0" mnemonicParsing="false" onAction="#pressedBtnDown7" text="▼" />
+            <ToggleButton id="btnUp6" fx:id="btnUp6" layoutX="53.0" layoutY="205.0" mnemonicParsing="false" onAction="#pressedBtnUp6" text="▲" />
+            <ToggleButton id="btnDown6" fx:id="btnDown6" layoutX="53.0" layoutY="230.0" mnemonicParsing="false" onAction="#pressedBtnDown6" text="▼" />
+            <ToggleButton id="btnUp5" fx:id="btnUp5" layoutX="53.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressedBtnUp5" text="▲" />
+            <ToggleButton id="btnDown5" fx:id="btnDown5" layoutX="53.0" layoutY="315.0" mnemonicParsing="false" onAction="#pressedBtnDown5" text="▼" />
+            <ToggleButton id="btnUp4" fx:id="btnUp4" layoutX="53.0" layoutY="375.0" mnemonicParsing="false" onAction="#pressedBtnUp4" text="▲" />
+            <ToggleButton id="btnDown4" fx:id="btnDown4" layoutX="53.0" layoutY="400.0" mnemonicParsing="false" onAction="#pressedBtnDown4" text="▼" />
+            <ToggleButton id="btnUp3" fx:id="btnUp3" layoutX="53.0" layoutY="460.0" mnemonicParsing="false" onAction="#pressedBtnUp3" text="▲" />
+            <ToggleButton id="btnDown3" fx:id="btnDown3" layoutX="53.0" layoutY="485.0" mnemonicParsing="false" onAction="#pressedBtnDown3" text="▼" />
+            <ToggleButton id="btnUp2" fx:id="btnUp2" layoutX="53.0" layoutY="545.0" mnemonicParsing="false" onAction="#pressedBtnUp2" text="▲" />
+            <ToggleButton id="btnDown2" fx:id="btnDown2" layoutX="53.0" layoutY="570.0" mnemonicParsing="false" onAction="#pressedBtnDown2" text="▼" />
+            <ToggleButton id="btnUp1" fx:id="btnUp1" layoutX="53.0" layoutY="630.0" mnemonicParsing="false" onAction="#pressedBtnUp1" text="▲" />
+            <ToggleButton id="btnDown1" fx:id="btnDown1" layoutX="53.0" layoutY="655.0" mnemonicParsing="false" onAction="#pressedBtnDown1" text="▼" />
+            <Button layoutX="273.0" layoutY="558.0" mnemonicParsing="false" text="▲" />
+            <Button layoutX="273.0" layoutY="583.0" mnemonicParsing="false" text="▼" />
             <Label layoutX="23.0" layoutY="42.0" text="8">
                <font>
                   <Font name="System Bold" size="25.0" />
