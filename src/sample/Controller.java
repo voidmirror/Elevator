@@ -77,12 +77,10 @@ public class Controller {
 
     public void pressedBtnUp7() {
         if (btnUp7.isSelected()) {
-            System.out.println("Yep");
             elevator.pressedBtnReaction(new PressedBtn(7, 1), true);
         } else {
             elevator.pressedBtnReaction(new PressedBtn(7, 1), false);
         }
-        System.out.println("yep x2");
         mainCycle();
     }
 
@@ -124,6 +122,7 @@ public class Controller {
         } else {
             elevator.pressedBtnReaction(new PressedBtn(2, 1), false);
         }
+        mainCycle();
     }
 
     public void pressedBtnUp1() {
@@ -212,24 +211,31 @@ public class Controller {
 
     public void moveElevator(int targetFloor, int currentFloor) {
         System.out.println(targetFloor + " " + currentFloor);
-        System.out.println(btnUp0.getLayoutX() + " " + btnUp0.getLayoutY());
+        System.out.println(imageViewElevator.getLayoutX() + " " + imageViewElevator.getLayoutY());
         int diff = (targetFloor - currentFloor);
         System.out.println(diff);
         System.out.println("stopped");
 
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1000 * abs(diff)), imageViewElevator);
-        translateTransition.setFromY(imageViewElevator.getScaleX() - 1);
-        translateTransition.setToY(imageViewElevator.getScaleY() - 85 * diff);
-        translateTransition.setCycleCount(1);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(500 * abs(diff)), imageViewElevator);
+        translateTransition.setFromY(imageViewElevator.getScaleY() - 1 + 85 * (0 - currentFloor));
+        translateTransition.setToY(imageViewElevator.getScaleY() - 1 + 85 * (0 - currentFloor) - 85 * diff);
         translateTransition.play();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+//        imageViewElevator.setLayoutY(imageViewElevator.getLayoutY() - 85 * diff);
+        System.out.println(imageViewElevator.getLayoutX() + " " + imageViewElevator.getLayoutY());
 
     }
 
     public void mainCycle() {
         if (elevator.checkCallNum()) {
-            while(elevator.getCallNum() != 0) {
+            while(/*elevator.getCallNum() != 0*/ elevator.getMoveDirection() == 0) {
                 // cycle
-
+                System.out.println("cycle start");
+//                System.out.println(elevator.getMoveDirection());
                 elevator.setCallOnTheWay(0);
                 elevator.setMoveDirection(1);   // DELETE !!
                 if (elevator.getMoveDirection() == 1) {
@@ -248,21 +254,27 @@ public class Controller {
                         }
                     }
                     if (elevator.getCallOnTheWay() != 0) {
-                        System.out.println(elevator.getCallOnTheWay() + " " + elevator.getCurrentFloor());
                         //TODO: move(floor: callOnTheWay, currentFloor, direction: moveDirection)
-//                        moveElevator(elevator.getCallOnTheWay(), elevator.getCurrentFloor());
+                        moveElevator(elevator.getCallOnTheWay(), elevator.getCurrentFloor());
+                        System.out.println("end?");
+                        elevator.setCurrentFloor(elevator.getCallOnTheWay());
                     } else {
                         //TODO: endMove ---> direction = 0
                     }
                 } else {
-                    for (int i = 0; i < elevator.getCurrentFloor(); i++) {
-                        elevator.setCallOnTheWay(elevator.getCallOnTheWay() + 1);
-                    }
+//                    for (int i = 0; i < elevator.getCurrentFloor(); i++) {
+//                        elevator.setCallOnTheWay(elevator.getCallOnTheWay() + 1);
+//                    }
                 }
+//                System.out.println(elevator.getMoveDirection());
+                System.out.println("cycle end");
 
             }
         } else {
             System.out.println("it is 0");
         }
+
+        elevator.setMoveDirection(1);
+        System.out.println("finished");
     }
 }
