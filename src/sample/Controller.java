@@ -220,14 +220,24 @@ public class Controller {
         translateTransition.setFromY(imageViewElevator.getScaleY() - 1 + 85 * (0 - currentFloor));
         translateTransition.setToY(imageViewElevator.getScaleY() - 1 + 85 * (0 - currentFloor) - 85 * diff);
         translateTransition.play();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+        TranslateTransition translateTransition1 = new TranslateTransition(Duration.millis(1000), btnUp0);
+        translateTransition1.setFromY(btnUp0.getScaleY());
+        translateTransition1.setToY(btnUp0.getScaleY() - 50);
+        translateTransition1.play();
+
+//        TranslateTransition translateTransition2 = new TranslateTransition(Duration.millis(1000), btnUp0);
+//        translateTransition.setFromY(btnUp0.getScaleY());
+//        translateTransition.setToY(btnUp0.getScaleY() + 100);
+//        translateTransition2.play();
 //        imageViewElevator.setLayoutY(imageViewElevator.getLayoutY() - 85 * diff);
         System.out.println(imageViewElevator.getLayoutX() + " " + imageViewElevator.getLayoutY());
 
+        if (diff > 0) {
+            elevator.switchOffFloorsState(targetFloor, 1);
+        } else {
+            elevator.switchOffFloorsState(targetFloor, 2);
+        }
     }
 
     public void mainCycle() {
@@ -274,7 +284,7 @@ public class Controller {
             System.out.println("it is 0");
         }
 
-        elevator.setMoveDirection(1);
+        elevator.setMoveDirection(1);   // DELETE !!
         System.out.println("finished");
     }
 }
