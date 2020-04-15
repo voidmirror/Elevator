@@ -20,6 +20,10 @@ public class Elevator {
     private int callNum = 0;
     private int callUpNow = 0;
     private int callDownNow = 0;
+
+    /**
+     * number of nearest call on the way of elevator
+     */
     private int callOnTheWay = 0;
 
     public Elevator() {
