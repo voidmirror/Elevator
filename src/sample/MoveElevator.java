@@ -22,6 +22,8 @@ public class MoveElevator implements Runnable {
         translateTransition.setFromY(imageView.getScaleY() + imageView.getTranslateY());
         System.out.println(imageView.getLayoutY() + " : scale");
         System.out.println(imageView.getScaleY() + imageView.getTranslateY());
+        translateTransition.setFromX(imageView.getScaleX());
+        translateTransition.setToX(imageView.getScaleX());
         translateTransition.setToY(imageView.getScaleY() + imageView.getTranslateY() + 85 * (currentFloor - targetFloor));
         System.out.println(imageView.getScaleY() + imageView.getTranslateY() + 85 * (currentFloor - targetFloor));
         translateTransition.play();

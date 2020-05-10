@@ -83,7 +83,7 @@
                   <Image url="@src/img/elevator_closed.jpg" />
                </image>
             </ImageView>
-            <Button id="btnTest" onAction="#testMove" layoutX="274.0" layoutY="303.0" mnemonicParsing="false" text="TEST" />
+            <Button id="btnTest" layoutX="274.0" layoutY="303.0" mnemonicParsing="false" onAction="#testMove" text="TEST" />
          </children></AnchorPane>
    </children>
 </GridPane>

@@ -30,17 +30,20 @@ public class MovingFormer implements Runnable{
                         //TODO: move(i, imageView, currentFloor);
                         MoveElevator moveElevator = new MoveElevator(i, imageView, elevator.getCurrentFloor());
                         Thread t = new Thread(moveElevator);
+                        System.out.println("STARTING THREAD");
                         t.start();
                         try {
-                            Thread.sleep(Math.abs(elevator.getCurrentFloor() - i) * 500);
+                            Thread.sleep(Math.abs(elevator.getCurrentFloor() - i) * 600);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
+                        System.out.println("AFTER SLEEP");
                         try {
-                            t.join();
+                            t.join();   // Doesn't work because of using Transition
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
+                        System.out.println("AFTER JOIN");
                         elevator.switchOffFloorsState(i, 1);
                     }   //TODO: "if *up* is under elevator and reverse in if downwards"
                 }
