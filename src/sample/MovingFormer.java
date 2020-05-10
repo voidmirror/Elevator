@@ -4,8 +4,8 @@ package sample;
 import javafx.scene.image.ImageView;
 
 public class MovingFormer implements Runnable{
-    Elevator elevator;
-    ImageView imageView;
+    private Elevator elevator;
+    private ImageView imageView;
 
     public MovingFormer(Elevator elevator, ImageView imageView) {
         this.elevator = elevator;
@@ -33,17 +33,18 @@ public class MovingFormer implements Runnable{
                         System.out.println("STARTING THREAD");
                         t.start();
                         try {
-                            Thread.sleep(Math.abs(elevator.getCurrentFloor() - i) * 600);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        System.out.println("AFTER SLEEP");
-                        try {
                             t.join();   // Doesn't work because of using Transition
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                         System.out.println("AFTER JOIN");
+                        try {
+                            Thread.sleep(Math.abs(elevator.getCurrentFloor() - i) * 600);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println("AFTER SLEEP");
+
                         elevator.switchOffFloorsState(i, 1);
                     }   //TODO: "if *up* is under elevator and reverse in if downwards"
                 }

@@ -5,9 +5,9 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class MoveElevator implements Runnable {
-    int targetFloor;
-    ImageView imageView;
-    int currentFloor;
+    private int targetFloor;
+    private ImageView imageView;
+    private int currentFloor;
 
     public MoveElevator(int targetFloor, ImageView imageView, int currentFloor) {
         this.targetFloor = targetFloor;
@@ -18,14 +18,14 @@ public class MoveElevator implements Runnable {
     @Override
     public void run() {
 
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(Math.abs(currentFloor - targetFloor) * 500), imageView);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(4000), imageView); // Math.abs(currentFloor - targetFloor) * 500
         translateTransition.setFromY(imageView.getScaleY() + imageView.getTranslateY());
-        System.out.println(imageView.getLayoutY() + " : scale");
-        System.out.println(imageView.getScaleY() + imageView.getTranslateY());
-        translateTransition.setFromX(imageView.getScaleX());
-        translateTransition.setToX(imageView.getScaleX());
+//        System.out.println(imageView.getLayoutY() + " : scale");
+//        System.out.println(imageView.getScaleY() + imageView.getTranslateY());
+//        translateTransition.setFromX(imageView.getScaleX());
+//        translateTransition.setToX(imageView.getScaleX());
         translateTransition.setToY(imageView.getScaleY() + imageView.getTranslateY() + 85 * (currentFloor - targetFloor));
-        System.out.println(imageView.getScaleY() + imageView.getTranslateY() + 85 * (currentFloor - targetFloor));
+//        System.out.println(imageView.getScaleY() + imageView.getTranslateY() + 85 * (currentFloor - targetFloor));
         translateTransition.play();
         System.out.println("ITS PLAYING");
 
